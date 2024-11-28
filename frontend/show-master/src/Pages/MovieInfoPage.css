@@ -1,0 +1,84 @@
+.movie-info-page {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    position: relative;
+    color: #fff;
+  }
+
+.movie-info-container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+.movie-info-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); /* Apply blur effect */
+    z-index: 1;
+  }
+
+h1, h2 {
+    color: #fff;
+}
+
+.director-image,
+.cast-image {
+  width: 100px; /* Set uniform width */
+  height: 100px; /* Set uniform height */
+  border-radius: 50%; /* Make the image circular */
+  margin: 10px; /* Add spacing around the images */
+  object-fit: cover; /* Ensure the image fits within the circular frame */
+}
+
+.cast-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cast-member {
+  margin: 10px;
+  text-align: center;
+}
+
+.movie-details {
+    position: relative;
+    z-index: 2; /* Above the blurred background */
+    max-width: 600px;
+    background-color: rgba(0, 0, 0, 0.8); /* Slightly transparent black background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.6); /* Shadow border */
+    margin-left: 50px; /* Shift container to the left */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Space between content and button */
+    min-height: 70vh; /* Ensures container height */
+  }
+
+  .book-button {
+    align-self: flex-start; /* Align the button to the left */
+    background-color: #ff5733;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+  }
+  
+  .book-button:hover {
+    background-color: #077913; /* Slightly darker on hover */
+  }
